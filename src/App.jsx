@@ -1,11 +1,11 @@
 import './App.css'
-import Hero from './Pages/Hero'
-import About from './Pages/About'
-import TeamSection from './Pages/Teams'
-import MarqueeSection from './Pages/MarqueeSection'
-import Features from './Pages/Features'
-import Projects from './Pages/Projects'
-import Footer from './Pages/Footer'
+import Hero from './pages/Hero'
+import About from './pages/About'
+import TeamSection from './pages/Teams'
+import MarqueeSection from './pages/MarqueeSection'
+import Features from './pages/Features'
+import Projects from './pages/Projects'
+import Footer from './pages/Footer'
 
 function App() {
 
