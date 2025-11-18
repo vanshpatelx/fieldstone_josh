@@ -5,23 +5,27 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Features() {
     const containerRef = useRef(null);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end end"]
     });
 
+    // Card 1 - 0% to 40% scroll 
+    const card1Y = useTransform(scrollYProgress, [0, 0.4], [0, -100]);
+    const card1Opacity = useTransform(scrollYProgress, [0, 0.3, 0.4], [1, 0.7, 0]);
+    const card1Scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.85]);
 
-    const card1Y = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
-    const card1Opacity = useTransform(scrollYProgress, [0.2, 0.4], [1, 0]);
-    const card1Scale = useTransform(scrollYProgress, [0.2, 0.4], [1, 0.8]);
+    // Card 2 - 30% to 70% scroll 
+    const card2Y = useTransform(scrollYProgress, [0.3, 0.5, 0.7], [100, 0, -100]);
+    const card2Opacity = useTransform(scrollYProgress, [0.3, 0.45, 0.55, 0.65, 0.7], [0, 1, 1, 0.7, 0]);
+    const card2Scale = useTransform(scrollYProgress, [0.3, 0.5, 0.7], [0.85, 1, 0.85]);
 
-    const card2Y = useTransform(scrollYProgress, [0.3, 0.6], [100, 0]);
-    const card2Opacity = useTransform(scrollYProgress, [0.3, 0.5, 0.6, 0.8], [0, 1, 1, 0]);
-    const card2Scale = useTransform(scrollYProgress, [0.3, 0.5, 0.6, 0.8], [0.8, 1, 1, 0.8]);
+    // Card 3 - 60% to 100% scroll 
+    const card3Y = useTransform(scrollYProgress, [0.6, 0.8, 1], [100, 0, 50]);
+    const card3Opacity = useTransform(scrollYProgress, [0.6, 0.75, 0.85, 0.95], [0, 1, 1, 1]);
+    const card3Scale = useTransform(scrollYProgress, [0.6, 0.8, 1], [0.85, 1, 1]);
 
-    const card3Y = useTransform(scrollYProgress, [0.6, 0.9], [100, 0]);
-    const card3Opacity = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
-    const card3Scale = useTransform(scrollYProgress, [0.6, 0.8], [0.8, 1]);
 
     const cards = [
         {
@@ -76,7 +80,8 @@ export default function Features() {
                 </p>
             </div>
             {/* Sticky Container */}
-            <div className="sticky top-0 h-screen flex items-center justify-center">
+            {/* Sticky Container */}
+            <div ref={containerRef} className="sticky top-0 h-screen flex items-center justify-center">
                 <div className="max-w-6xl mx-auto w-full relative h-[600px]">
 
                     {/* Card 1 */}
@@ -84,7 +89,8 @@ export default function Features() {
                         style={{
                             y: card1Y,
                             opacity: card1Opacity,
-                            scale: card1Scale
+                            scale: card1Scale,
+                            transform: "translateZ(0)"
                         }}
                         className="absolute inset-0 bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
                     >
@@ -137,22 +143,22 @@ export default function Features() {
                                 </motion.div>
                             </div>
                             <div className="flex items-center justify-center">
-    <img
-        src={cards[0].image}
-        className="object-contain w-full max-w-full h-[300px] sm:h-[400px] rounded-xl"
-        alt={cards[0].title.part1 + cards[0].title.highlighted + cards[0].title.part2}
-    />
-</div>
-
+                                <img
+                                    src={cards[0].image}
+                                    className="object-contain w-full max-w-full h-[300px] sm:h-[400px] rounded-xl"
+                                    alt={cards[0].title.part1 + cards[0].title.highlighted + cards[0].title.part2}
+                                />
+                            </div>
                         </div>
                     </motion.div>
 
-                    {/* Card 2 */}
+                    {/* Card 2 - FIXED: Normal opacity/scale use karo */}
                     <motion.div
                         style={{
                             y: card2Y,
-                            opacity: card2Opacity,
-                            scale: card2Scale
+                            opacity: card2Opacity,  // Changed from card2ExitOpacity
+                            scale: card2Scale,      // Changed from card2ExitScale
+                            transform: "translateZ(0)"
                         }}
                         className="absolute inset-0 bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
                     >
