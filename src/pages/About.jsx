@@ -137,7 +137,7 @@ const About = ({
                                 whileHover="hover"
                                 className="group"
                             >
-                                <button className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-2 sm:pl-5 sm:py-1.5 4k:pl-6 4k:py-2.5 4k:text-lg rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit border max-w-xs">
+                                <button type='button' className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-2 sm:pl-5 sm:py-1.5 4k:pl-6 4k:py-2.5 4k:text-lg rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit border max-w-xs">
 
                                     {/* Hover expanding animation */}
                                     <motion.div

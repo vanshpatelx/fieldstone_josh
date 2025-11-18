@@ -92,7 +92,7 @@ export default function Home() {
           {/* Desktop Navlinks */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-7 4k:gap-10 mx-auto">
             {navItems.map((item) => (
-              <button
+              <button type='button'
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`
@@ -112,7 +112,7 @@ export default function Home() {
             whileHover="hover"
             className="hidden md:block"
           >
-            <button className="relative flex items-center justify-between gap-3 bg-white text-[#2E6153] pl-3 sm:pl-4 4k:pl-5 pr-1.5 sm:pr-2 4k:pr-2.5 py-2 sm:py-2 4k:py-3 rounded-full font-medium transition-all duration-300 overflow-hidden cursor-pointer">
+            <button type='button' className="relative flex items-center justify-between gap-3 bg-white text-[#2E6153] pl-3 sm:pl-4 4k:pl-5 pr-1.5 sm:pr-2 4k:pr-2.5 py-2 sm:py-2 4k:py-3 rounded-full font-medium transition-all duration-300 overflow-hidden cursor-pointer">
 
               {/* Hover expanding light animation */}
               <motion.div
@@ -148,7 +148,7 @@ export default function Home() {
           </motion.div>
 
           {/* Mobile Menu Button */}
-          <button
+          <button type='button'
             className="md:hidden flex flex-col gap-1 ml-auto p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -191,7 +191,7 @@ export default function Home() {
             >
               <div className="p-6 space-y-4">
                 {navItems.map((item, index) => (
-                  <motion.button
+                  <motion.button type='button'
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     variants={mobileMenuItemVariants}
@@ -209,7 +209,7 @@ export default function Home() {
                   transition={{ delay: navItems.length * 0.1 }}
                   className="pt-4"
                 >
-                  <button className="relative flex items-center justify-between cursor-pointer gap-3 bg-[#2E6153] text-white pl-4 pr-2 py-3 rounded-full font-medium transition-all duration-300 overflow-hidden w-full">
+                  <button type='button' className="relative flex items-center justify-between cursor-pointer gap-3 bg-[#2E6153] text-white pl-4 pr-2 py-3 rounded-full font-medium transition-all duration-300 overflow-hidden w-full">
                     <span className="text-sm font-medium">Contact Us</span>
                     <div className="relative w-8 h-8 bg-white rounded-full flex items-center justify-center">
                       <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#2E6153]" />
@@ -271,7 +271,7 @@ export default function Home() {
             whileHover="hover"
             className="group"
           >
-            <button className="relative flex items-center justify-between gap-3 bg-white text-[#2E6153] pl-3 sm:pl-4 4k:pl-5 pr-1.5 sm:pr-2 4k:pr-2.5 py-2 sm:py-2 4k:py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl border border-gray-200 overflow-hidden cursor-pointer">
+            <button type='button' className="relative flex items-center justify-between gap-3 bg-white text-[#2E6153] pl-3 sm:pl-4 4k:pl-5 pr-1.5 sm:pr-2 4k:pr-2.5 py-2 sm:py-2 4k:py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl border border-gray-200 overflow-hidden cursor-pointer">
 
               {/* Hover expanding light animation */}
               <motion.div

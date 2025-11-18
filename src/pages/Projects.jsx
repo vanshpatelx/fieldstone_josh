@@ -41,7 +41,7 @@ export default function Projects() {
                         whileHover="hover"
                         className="group"
                     >
-                        <button className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-2 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs">
+                        <button type="button" className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-2 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs">
                             <motion.div
                                 variants={{
                                     rest: { scale: 0, opacity: 0 },
@@ -84,20 +84,21 @@ export default function Projects() {
                             {/* IMAGE */}
                             <div className="w-full h-[260px] rounded-xl overflow-hidden">
                                 <img
+                                   alt={card.title}
                                     src={card.img}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
                                 />
                             </div>
 
                             {/* TEXT CONTENT */}
-                            <h2 className="mt-4 text-xl font-semibold leading-snug text-black">
+                            <h2 className="mt-4 text-xl font-semibold leading-snug text-[#03030F]">
                                 {card.title}
                             </h2>
 
                             <p className="mt-2 text-gray-600 text-sm">{card.desc}</p>
 
                             {/* READ MORE BUTTON */}
-                            <button className="mt-4 text-black font-medium flex items-center gap-2 group-hover:underline group-hover:text-[#2E6153] cursor-pointer">
+                            <button type="button" className="mt-4 text-[#03030F] font-medium flex items-center gap-2 group-hover:underline group-hover:text-[#2E6153] cursor-pointer">
                                 Read More <ArrowUpRight size={18} />
                             </button>
                         </motion.div>

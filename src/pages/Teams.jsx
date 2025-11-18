@@ -160,6 +160,7 @@ export default function TeamSection() {
         <div className="flex justify-center gap-2 mt-6">
           {team.map((_, i) => (
             <motion.button
+            type="button"
               key={i}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 currentIndex === i ? 'bg-[#2E6153] w-6' : 'bg-gray-400'

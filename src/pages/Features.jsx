@@ -106,7 +106,7 @@ export default function Features() {
                                     whileHover="hover"
                                     className="group"
                                 >
-                                    <button className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-1.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs">
+                                    <button type="button" className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-1.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs">
                                         <motion.div
                                             variants={{
                                                 rest: { scale: 0, opacity: 0 },
@@ -174,7 +174,7 @@ export default function Features() {
                                     whileHover="hover"
                                     className="group"
                                 >
-                                    <button className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-1.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs group-hover:text-[#2E6153]">
+                                    <button type="button" className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-1.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs group-hover:text-[#2E6153]">
                                         <motion.div
                                             variants={{
                                                 rest: { scale: 0, opacity: 0 },
@@ -241,7 +241,7 @@ export default function Features() {
                                     whileHover="hover"
                                     className="group"
                                 >
-                                    <button className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-1.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs">
+                                    <button type="button" className="relative flex items-center justify-between gap-4 bg-[#2E6153] text-white pl-4.5 cursor-pointer pr-2.5 py-1.5 sm:pl-5 sm:py-1.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden w-fit max-w-xs">
                                         <motion.div
                                             variants={{
                                                 rest: { scale: 0, opacity: 0 },

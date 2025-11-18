@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "npm run build:client && npm run build:server && node prerender.js",
+  "build:client": "vite build",
+  "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "framer-motion": "^12.23.24",

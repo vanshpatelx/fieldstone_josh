@@ -17,7 +17,7 @@ export default function Footer() {
                                 placeholder="Enter your email address"
                                 className="flex-1 px-4 py-3 sm:py-3 text-[#03030F] bg-transparent outline-none rounded-2xl sm:rounded-none"
                             />
-                            <button className="bg-[#2E6153] hover:bg-[#265045] cursor-pointer text-white px-6 py-3 rounded-full sm:rounded-full font-medium flex items-center justify-center gap-2 transition-all mt-2 sm:mt-0 sm:ml-2">
+                            <button type="button" className="bg-[#2E6153] hover:bg-[#265045] cursor-pointer text-white px-6 py-3 rounded-full sm:rounded-full font-medium flex items-center justify-center gap-2 transition-all mt-2 sm:mt-0 sm:ml-2">
                                 Send <ArrowUpRight size={20} className="sm:w-6 sm:h-6" />
                             </button>
                         </div>
