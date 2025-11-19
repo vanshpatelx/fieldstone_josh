@@ -80,7 +80,7 @@ const About = ({
                             </p>
                             <div ref={ref} className="border-l-4 border-[#2E6153] pl-6 4k:pl-8">
                                 <motion.h3
-                                    className="text-4xl md:text-6xl 4k:text-7xl font-bold text-gray-900 mb-2"
+                                    className="text-5xl md:text-6xl 4k:text-7xl font-bold text-gray-900 mb-2"
                                     initial={{ opacity: 0, scale: 0.5 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5 }}
@@ -102,7 +102,7 @@ const About = ({
                             >
                                 <img
                                     src="/about.png"
-                                    alt="Business Team"
+                                    alt="team members image"
                                     className="w-full h-full object-cover"
                                 />
                             </motion.div>

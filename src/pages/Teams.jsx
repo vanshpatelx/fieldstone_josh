@@ -7,31 +7,37 @@ const team = [
     name: "Ajay Kumar Dasarathy",
     role: "Senior Advisor - Project Management",
     img: "/img1.jpeg",
+    alt: "Ajay Kumar Dasarathy – Senior Advisor Project Management"
   },
   {
     name: "Kartik Vaideswaran",
     role: "Lead Petrochemical Engineer",
     img: "/img2.png",
+    alt: "Kartik Vaideswaran – Lead Petrochemical Engineer"
   },
   {
     name: "Dr. Suman Banerjee",
     role: "Senior Advisor & Head of Finance",
     img: "/img3.jpeg",
+    alt: "Dr. Suman Banerjee – Senior Advisor & Head of Finance"
   },
   {
     name: "Rahul Ajay",
     role: "Vice President",
     img: "/img4.jpeg",
+    alt: "Rahul Ajay – Vice President"
   },
   {
     name: "Dr. Manfred Ernst",
     role: "Director & Advisor",
     img: "/img5.jpeg",
+    alt: "Dr. Manfred Ernst – Director & Advisor"
   },
   {
     name: "Sundar Sundaresan",
     role: "Managing Director & President",
     img: "/img6.jpeg",
+    alt: "Sundar Sundaresan – Managing Director & President"
   },
 ];
 
@@ -40,28 +46,28 @@ export default function TeamSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (window.innerWidth >= 640) return; 
+    if (window.innerWidth >= 640) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % team.length;
-        
+
         // Scroll to the next card
         if (scrollContainerRef.current) {
           const scrollContainer = scrollContainerRef.current;
           const cardWidth = scrollContainer.children[0]?.offsetWidth || 0;
           const gap = 24; // gap-6 = 24px
           const scrollPosition = nextIndex * (cardWidth + gap);
-          
+
           scrollContainer.scrollTo({
             left: scrollPosition,
             behavior: 'smooth'
           });
         }
-        
+
         return nextIndex;
       });
-    }, 3000); 
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -90,7 +96,7 @@ export default function TeamSection() {
             >
               <img
                 src={member.img}
-                alt="team-member"
+                alt={member.alt}
                 className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
               />
             </motion.div>
@@ -108,17 +114,17 @@ export default function TeamSection() {
       {/* TEAM MOBILE SCROLL (HORIZONTAL) */}
       <div className="sm:hidden relative">
         {/* Scroll container with hidden scrollbar */}
-        <div 
+        <div
           ref={scrollContainerRef}
           className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-4 pt-3 scrollbar-hide"
-          style={{ 
+          style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
           }}
         >
           {team.map((member, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               className="snap-center min-w-[85%] shrink-0"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -138,13 +144,13 @@ export default function TeamSection() {
                   }}
                   className="absolute inset-0 bg-linear-to-r from-blue-500/20 to-purple-500/20 rounded-3xl pointer-events-none"
                 />
-                
+
                 <img
                   src={member.img}
-                  alt="team-member"
+                  alt={member.alt}
                   className="w-full h-64 object-cover relative z-10"
                 />
-                
+
                 <div className="px-4 py-5 relative z-10">
                   <h3 className="text-lg font-semibold text-[#121212]">
                     {member.name}
@@ -160,11 +166,10 @@ export default function TeamSection() {
         <div className="flex justify-center gap-2 mt-6">
           {team.map((_, i) => (
             <motion.button
-            type="button"
+              type="button"
               key={i}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                currentIndex === i ? 'bg-[#2E6153] w-6' : 'bg-gray-400'
-              }`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === i ? 'bg-[#2E6153] w-6' : 'bg-gray-400'
+                }`}
               onClick={() => {
                 setCurrentIndex(i);
                 if (scrollContainerRef.current) {
@@ -172,7 +177,7 @@ export default function TeamSection() {
                   const cardWidth = scrollContainer.children[0]?.offsetWidth || 0;
                   const gap = 24;
                   const scrollPosition = i * (cardWidth + gap);
-                  
+
                   scrollContainer.scrollTo({
                     left: scrollPosition,
                     behavior: 'smooth'
